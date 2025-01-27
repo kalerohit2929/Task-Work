@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <script>
+
+        //     function add(num1,num2){
+        // console.log(num1+num2);
+        // }
+        // add(30,40)
+
+        // const var1=function(num4,num5){
+        // console.log(num4+num5);
+        // }
+        // var1(4,4);
+
+        // (function(num1,num2){
+        //     console.log(num1+num2);
+        // })(50,60)
+
+        const numb = prompt("Enter your Number: ");
+
+        // A prime number is a natural number greater than 1 
+        function isprime(numb) {
+            if (numb <= 1) {
+                return false;
+
+            } for (let i = 2; i < numb; i++) {      // check the condition if the result is equal to 0 or not
+                if(numb % i === 0) {
+                 return false;
+                }
+            }
+            return true;
+
+        }
+         
+         if (isprime(numb)) {
+             console.log(numb + " is a prime number");
+             alert("It is a prime number")
+        }
+        else {
+            console.log(numb + " is  not a prime number");
+            alert("Not a prime number")
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
