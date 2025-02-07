@@ -1,4 +1,6 @@
-function add(num1,num2){
-console.log(num1+num2);
-}
-add(30,40)
+let clock = document.getElementById('clock');
+
+setInterval(()=>{
+    let date = new date();
+    clock.innerHTML = date.toLocaleTimeString();
+});
