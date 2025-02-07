@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
+<style>
+    .typewriter {
+  overflow: hidden; /* Ensures only part of the text is visible */
+  border-right: .15em solid black; /* The cursor */
+  white-space: nowrap; /* Prevents text from wrapping */
+  margin: 0 auto; /* Centers the text */
+  letter-spacing: .15em; /* Adjust spacing between letters */
+  animation: 
+    typing 3s steps(30),
+    blink 0.5s infinite;
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-right-color: transparent;
+  }
+}
+</style>
 <body>
-
-
-
-
-
-    <div id="clock"></div>
-
-
-
-
-
-
-
-
-
-    <script>
-        function timeupdate(){
-            const now = new Date;
-
-            const hours = now.getHours();
-            const minutes = now.getMinutes();
-            const seconds = now.getSeconds();
-            const totaltime = `${hours}:${minutes}:${seconds}`;
-
-            document.getElementById('clock').textContent = totaltime;
-
-
-        }
-        setInterval(timeupdate,1000)
-        
-    </script>
+    <span class="typewriter">This is my typed text.</span>
+    
 </body>
-
 </html>
