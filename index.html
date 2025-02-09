@@ -1,76 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="main-container">
+    <div class="container">
 
-        <div id="small-container1"></div>
-        <div id="small-container2"></div>
-        <div id="small-container3"></div>
-        <div id="small-container4"></div>
+        
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+            <div class="content4"></div>
+            
+        
 
+        <!-- <div class="btn">
+            <button id="startbtn">Start-button</button>
+            <button id="stopbtn">Stop-Button</button>
+            <button id="resetbtn">Reset-Button</button>
+
+
+        </div> -->
 
 
 
 
     </div>
-    <script>
-
-        function timeupdate() {
-            const now = new Date;
-            const hours = now.getHours();
-            const totaltime = `${hours}`;
-
-            document.getElementById('small-container1').textContent = totaltime;
+    <div class="btn">
+        <button id="startbtn">Start-button</button>
+        <button id="stopbtn">Stop-Button</button>
+        <button id="resetbtn">Reset-Button</button>
 
 
-        }
-        setInterval(timeupdate, 1000);
-
-        function hourupdate() {
-            const now = new Date();
-            const minutes = now.getMinutes();
-            const totaltime = `${minutes}`;
-
-            document.getElementById('small-container2').textContent = totaltime;
-        }
-        setInterval(hourupdate, 1000);
-
-        function minutesupdate() {
-            const now = new Date;
-            const seconds = now.getSeconds();
-            const totaltime = `${seconds}`;
-
-            document.getElementById('small-container3').textContent = totaltime;
-
-
-        }
-        setInterval(minutesupdate, 1000)
-
-        function dayupdatee() {
-            const now = new Date();
-            const day = now.getDay();
-            const dayname = `${day}`;
-        
-
-            document.getElementById('small-container4').textContent = dayname;
-        }
-        setInterval(dayupdatee,1000)
-
-
-       
-
-  
-
-    </script>
-
+    </div>
+    
 </body>
-
 </html>
