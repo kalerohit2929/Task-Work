@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
+    <h1>Basic Calculator</h1>
 
-        
-            <div class="content1"></div>
-            <div class="content2"></div>
-            <div class="content3"></div>
-            <div class="content4"></div>
-            
-        
-
-        <!-- <div class="btn">
-            <button id="startbtn">Start-button</button>
-            <button id="stopbtn">Stop-Button</button>
-            <button id="resetbtn">Reset-Button</button>
-
-
-        </div> -->
-
-
-
-
-    </div>
     <div class="btn">
-        <button id="startbtn">Start-button</button>
-        <button id="stopbtn">Stop-Button</button>
-        <button id="resetbtn">Reset-Button</button>
+        <button id="addtn" onclick="Addbutton()">Addition</button>
+        <button id="subbtn">Substraction</button>
+        <button id="mulbtn">Multiplication</button>
+        <button id="divbtn">Division</button>
+        <button id="modbtn">Mod</button>
 
 
     </div>
-    
+    <div class="content">
+
+        <form action="" id="num1">Enter 1st No:</form>
+        <input type="number">
+
+        <form action="" id="num2">Enter 2nd No:</form>
+        <input type="number">
+
+        <form action="" id="operation">Operation</form>
+        <input type="text">
+
+        <form action="" id="result">Answer</form>
+        <input type="number">
+
+
+
+
+        <script>
+
+            function AddNumbers() {
+                const num1 = parseFloat(document.getElementById("num1").value);
+                const num2 = parseFloat(document.getElementById("num2").value);
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    alert("Please enter valid numbers.");
+                    return; 
+                }
+                const sum = num1 + num2;
+                document.getElementById("result").textContent = "sum ";
+            }
+
+
+
+
+
+        </script>
+    </div>
+
 </body>
+
 </html>
