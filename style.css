@@ -1,82 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
+body {
+    background: linear-gradient(to right, #304352,#d7d2cc);
+    background-color: #212121;
+background-color: black;
 }
-h1{
-    font-size: 54px;
-    color: blue;
+
+
+
+
+.flip-main {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.flip-main1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+
+
+
+
+.flip-card {
+   
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title2 {
+    font-size: 1.5em;
+    font-weight: 900;
     text-align: center;
-    margin-top: 20px;
+    margin: 0;
 }
-/* .btn{
-    margin-top: 10px;
-} */
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    padding: 5px;
 
 
-.content{
-    width: 20%;
-    height: 300px;
-    border: 2px solid black;
-    background-color: bisque;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+    background-color: #fab5704c;
+}
 
+.flip-card-front {
+   
+
+    color: white;
+    background: #102542;
     
 }
-.btn{
-   margin-left: 300px;
-   margin-top: 450px;
-}
-#addtn{
-    margin: 50px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    color: whitesmoke;
-}
-#subbtn{
-    margin: 50px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    color: whitesmoke;
-}
-#mulbtn{
-    margin: 50px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    color: whitesmoke;
-}
-#divbtn{
-    margin: 50px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    color: whitesmoke;
-}
-#modbtn{
-    margin: 50px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    color: whitesmoke;
-}
 
- form{
-    margin-left: 100px;
-    gap: 500px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
- }
- input{
-    margin-left: 70px;
- }
+.flip-card-back {
+    
 
-  
+    color: white;
+    transform: rotateY(180deg);
+    background: #102542;
+   
+}
